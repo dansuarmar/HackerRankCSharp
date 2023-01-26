@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HackerRankCSharp_Tests
 {
-    public class HackerRank_ReverseMatrix
+    public class HackerRank_FlippingTheMatrix
     {
         public static int flippingMatrix(List<List<int>> matrix)
         {

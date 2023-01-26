@@ -50,8 +50,6 @@ namespace HackerRankCSharp_Tests
                         return i;
                     else
                         return (s.Length - 1 - i);
-                    
-                    return i;
                 }
             }
 
