@@ -11,13 +11,11 @@ namespace HackerRankCSharp_Tests
         public static int towerBreakers(int n, int m)
         {
             if(m == 1) return 2;
-            switch (n) 
-            {
-                case var d when d % 2 == 1:
-                    return 1;
-                default: 
-                    return 2;
-            }
+
+            if(n % 2 == 1)
+                return 1;
+
+            return 2;
         }
     }
 }

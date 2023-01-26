@@ -62,7 +62,7 @@ namespace HackerRankCSharp_Tests
         {
             var regreso =  new List<string>();
             //var queue = new StackQueue();
-            var queue = new Queue<int>();
+            var queue = new Queue<int>(); // This is a Cheat
             foreach(var item in instructions) 
             {
                 switch(item[0])
