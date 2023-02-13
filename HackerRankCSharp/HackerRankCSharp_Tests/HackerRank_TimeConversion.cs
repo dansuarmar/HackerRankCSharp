@@ -10,7 +10,6 @@ namespace HackerRankCSharp_Tests
     {
         public static string timeConversion(string s)
         {
-            var newTime = "";
             DateTime originalDate;
             DateTime.TryParse(s, out originalDate);
             return originalDate.ToString("HH:mm:ss");

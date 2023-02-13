@@ -11,7 +11,7 @@ namespace HackerRankCSharp_Tests
     {
         public static int superDigit(string n, int k)
         {
-            Int64 result = 0;
+            long result = 0;
             n = n.Trim();
             for (int i = 0; i < n.Length; i++)
             {
@@ -25,7 +25,7 @@ namespace HackerRankCSharp_Tests
             return (int)result;
         }
 
-        private static int CalculateSuperDigit(Int64 baseInt)
+        private static int CalculateSuperDigit(long baseInt)
         {
             var result = 0;
             var baseString = baseInt.ToString();

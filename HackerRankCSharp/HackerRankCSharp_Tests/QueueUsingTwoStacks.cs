@@ -27,18 +27,19 @@ namespace HackerRankCSharp_Tests
         //    //         textWriter.WriteLine(item.ToString());
         //    // }
 
-        //    var result = new List<int>() { 14, 14 };
-        //    foreach (var item in result)
-        //    {
-        //        textWriter.WriteLine(result.ToString());
-        //    }
+        //    //var result = new List<int>() { 14, 14 };
+        //    //var result = ProcessQueue(arr);
+        //foreach (var item in result)
+        //{
+        //    textWriter.WriteLine(item.ToString());
+        //}
 
         //    textWriter.Flush();
         //    textWriter.Close();
         //}
 
         [Fact]
-        public void ProcessQueue_Test() 
+        public static void ProcessQueue_Test() 
         {
             var instructions = new List<List<int>>() 
             {
@@ -58,7 +59,7 @@ namespace HackerRankCSharp_Tests
             Assert.Equal(2, result.Count);
         }
 
-        public List<string> ProcessQueue(List<List<int>> instructions) 
+        public static List<string> ProcessQueue(List<List<int>> instructions) 
         {
             var regreso =  new List<string>();
             //var queue = new StackQueue();
