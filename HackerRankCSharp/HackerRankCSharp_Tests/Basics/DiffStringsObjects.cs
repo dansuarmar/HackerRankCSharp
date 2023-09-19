@@ -25,7 +25,7 @@ namespace ViaticosRequisicionesAPI_Test
         {
             var byeObj = new Bye() { str = "Hellow World" };
             ChangeObject(byeObj);
-            Assert.Equal("By World", byeObj.str);
+            Assert.Equal("Bye World", byeObj.str);
         }
 
         public void ChangeObject(Bye inObj)

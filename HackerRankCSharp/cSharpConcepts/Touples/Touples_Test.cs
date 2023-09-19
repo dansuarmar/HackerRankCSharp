@@ -38,43 +38,37 @@ namespace cSharpConcepts.Touples
             return ("John", "Doe", 30);
         }
 
+        [Fact]
         public void PatterMatchingTouples_Test() 
         {
             (string FirstName, string LastName) person = ("John", "Doe");
 
+            string switchResponse = "";
             switch (person)
             {
                 case ("John", "Doe"):
-                    Console.WriteLine("Found John Doe.");
+                    switchResponse = "Found John Doe.";
                     break;
                 case var (firstName, lastName) when firstName == "Jane":
-                    Console.WriteLine($"Found Jane {lastName}.");
+                    switchResponse = $"Found Jane {lastName}.";
                     break;
                 case var (firstName, lastName):
-                    Console.WriteLine($"Found {firstName} {lastName}.");
-                    break;
-                default:
-                    Console.WriteLine("Person not found.");
+                    switchResponse = $"Found {firstName} {lastName}.";
                     break;
             }
+            Assert.Equal("Found John Doe.", switchResponse);
 
+            var ifResponse = "";
             if (person is ("John", "Doe"))
-            {
-                Console.WriteLine("Found John Doe.");
-            }
+                ifResponse = "Found John Doe.";
             else if (person is var (firstName, lastName) && firstName == "Jane")
-            {
-                Console.WriteLine($"Found Jane {lastName}.");
-            }
+                ifResponse = $"Found Jane {lastName}.";
             else if (person is var (firstName2, lastName2))
-            {
-                Console.WriteLine($"Found {firstName2} {lastName2}.");
-            }
+                ifResponse = $"Found {firstName2} {lastName2}.";
             else
-            {
-                Console.WriteLine("Person not found.");
-            }
+                ifResponse = "Person not found.";
 
+            Assert.Equal("Found John Doe.", ifResponse);
         }
     }
 }

@@ -32,17 +32,6 @@ namespace HackerRankCSharp_Tests
 
         public static List<string> ProcessFunctions(List<List<string>> arr)
         {
-            //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-            //int n = Convert.ToInt32(Console.ReadLine().Trim());
-
-            //List<List<string>> arr = new();
-
-            //for (int i = 0; i < n; i++)
-            //{
-            //    arr.Add(Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => arrTemp).ToList());
-            //}
-
             List<string> regreso = new();
 
             Stack<String> stack = new();
@@ -62,7 +51,7 @@ namespace HackerRankCSharp_Tests
                         break;
                     case "3": //print kth character
                         //textWriter.WriteLine(builder[Convert.ToInt32(item[1]) - 1]);
-                        //regreso.Add(builder[Convert.ToInt32(item[1]) - 1].ToString());
+                        regreso.Add(builder[Convert.ToInt32(item[1]) - 1].ToString());
                         break;
                     case "4": //undo
                         builder = new StringBuilder(stack.Pop());
